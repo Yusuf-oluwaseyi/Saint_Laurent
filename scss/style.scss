@@ -10,11 +10,38 @@ body {
     color: #ffffff;
     font-family: 'Julius Sans One', sans-serif;;
 }
+.layout {
+    height: 100%;
+    overflow: hidden;
+}
+// fixed part
+.container-fluid {
+    display: grid;
+    grid-template-columns: 47% 1fr;
+    height: 100%;
+}
+.container-fluid .fixed {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+.based_container {
+    padding: 10% 5% 10% 15%;
+}
+.hero h1 {
 h1 {
     margin-top: -25px;
 }
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-right: 15px;
+    margin-top: 0;
+}
 .hero p {
     font-size: 0.8rem;
+    font-size: var(--normal-font);
+    font-weight: 400;
+    font-style: normal;
 }
 strong {
     text-decoration: underline;
@@ -82,10 +109,6 @@ strong {
     pointer-events: none;
     transition: 0.05s;
     z-index: 1000;
-}
-.layout {
-  height: 100%;
-  overflow: hidden;
 }
 nav a:hover {
     color: #fff;
@@ -175,19 +198,6 @@ footer .social a {
     position: absolute;
     right: 2.5rem;
 }
-.container {
-    display: grid;
-    grid-template-columns: 47% 1fr;
-    height: 100%;
-}
-.fixed {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-}
-.based_container {
-    padding: 10% 5% 10% 15%;
-}
 
 
 // Main section
@@ -196,17 +206,17 @@ footer .social a {
     font-weight: bold;
     color: red;
 }
-.container .main {
+.container-fluid .main {
     height: 100vh;
     overflow-y: auto;
 }
-.based_container, .container .main .page_container {
+.based_container, .container-fluid .main .page_container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
 }
-.container .main .page_container {
+.container-fluid .main .page_container {
     padding: 10% 15% 10% 5%;
 }
 .work {
@@ -214,10 +224,10 @@ footer .social a {
     flex-direction: column;
     width: 100%;
 }
- .work .portfolio_showcase_full{
+.portfolio_showcase_full{
     grid-template-columns: 1fr;
 }
-.work .portfolio_showcase {
+.portfolio_showcase {
     -webkit-column-gap: .6rem;
     column-gap: .6rem;
     display: grid;
@@ -226,3 +236,64 @@ footer .social a {
     row-gap: .6rem;
     width: 100%;
 }
+.work .portfolio_showcase_full .title {
+    grid-column-end: unset;
+    grid-column-start: unset;
+}
+  .work .portfolio_showcase .title {
+    color: #fff;
+    grid-column-end: 3;
+    grid-column-start: 1;
+    margin: 1rem 0;
+    width: 100%;
+}
+.box .project_details p {
+    color: #777778;
+    font-family: air-light;
+    font-size: var(--small-font);
+    font-weight: 600;
+    height: 5rem;
+    letter-spacing: .03rem;
+    line-height: 2;
+  }
+// @media (min-width: 993px) {
+.box_container_full {
+    width: 100%;
+}
+// }
+.box_container {
+  background-color: #1b1b1d;
+  margin: 0;
+  position: relative;
+  transition: all .2s;
+//   width: 100%;
+}
+.box {
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 2.5rem;
+}
+.box_container_full .box {
+    padding: 2.5rem;
+  }
+.box .project_links a {
+    color: inherit;
+    color: #bebebe;
+    font-size: var(--small-font);
+    line-height: 21px;
+    margin-right: .8rem;
+    text-decoration: none;
+}
+.box .project_links a i {
+    color: #777778;
+    margin-right: 2px;
+  }
+  .fa, .fas {
+    font-weight: 900;
+  }
+  .fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+  }
