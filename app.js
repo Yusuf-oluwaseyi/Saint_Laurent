@@ -63,3 +63,13 @@ function eyeball() {
     eye.style.transform = `rotate(${rotate}deg)`;
   });
 }
+
+// loader page
+window.addEventListener("load", function() {
+    const loader = document.querySelector('.loader');
+        loader.classList.add("loader--hidden");
+
+        loader.addEventListener("transitionend", function () {
+        document.body.removeChild(".loader");
+    })
+});

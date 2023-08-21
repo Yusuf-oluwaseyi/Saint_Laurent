@@ -45,7 +45,7 @@ h1 {
 }
 strong {
     text-decoration: underline;
-    text-decoration-color: red;
+    text-decoration-color: blue;
 }
 // eyes 
   .eyes {
@@ -74,7 +74,7 @@ strong {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: red;
+    background: blue;
   }
 
 
@@ -103,7 +103,7 @@ strong {
     width: 25px;
     height: 25px;
     transform: translate(-50%, -50%);
-    border: 1px solid red;
+    border: 1px solid grey;
     mix-blend-mode: difference;
     border-radius: 50%;
     pointer-events: none;
@@ -153,7 +153,7 @@ nav ul li a .menu_bullet {
         width: 2.5rem;
 }
 nav ul li:hover a .menu_bullet {
-    background-color: red;
+    background-color: blue;
     max-width: 4rem;
     transition: all .2s linear;
     width: 4rem;
@@ -204,7 +204,7 @@ footer .social a {
 .main h3 {
     font-size: .7rem;
     font-weight: bold;
-    color: red;
+    color: blue;
 }
 .container-fluid .main {
     height: 100vh;
@@ -299,3 +299,311 @@ footer .social a {
   .fa, .far, .fas {
     font-family: "Font Awesome 5 Free";
   }
+
+//   Loader page
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    transition: opacity 0.75s, visibility 0.75s;
+    z-index: 1000000;
+}
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+.body {
+  background-color: #f70000;
+  overflow: hidden;
+  z-index: 1000000;
+}
+
+.name {
+  position: absolute;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  left: 50%;
+  top: 58%;
+  margin-left: -20px;
+  z-index: 1000000;
+}
+
+.body {
+  position: absolute;
+  top: 50%;
+  margin-left: -50px;
+  left: 50%;
+  animation: speeder .4s linear infinite;
+  z-index: 1000000;
+
+  > span {
+    height: 5px;
+    width: 35px;
+    background: #000;
+    position: absolute;
+    top: -19px;
+    left: 60px;
+    border-radius: 2px 10px 1px 0;
+    z-index: 1000000;
+  }
+}
+
+.base {
+  span {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-right: 100px solid #000;
+    border-bottom: 6px solid transparent;
+    z-index: 1000000;
+
+    &:before {
+      content: "";
+      height: 22px;
+      width: 22px;
+      border-radius: 50%;
+      background: #000;
+      position: absolute;
+      right: -110px;
+      top: -16px;
+      z-index: 1000000;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 0 solid transparent;
+      border-right: 55px solid #000;
+      border-bottom: 16px solid transparent;
+      top: -16px;
+      right: -98px;
+      z-index: 1000000;
+    }
+  }
+}
+
+.face {
+  position: absolute;
+  height: 12px;
+  width: 20px;
+  background: #000;
+  border-radius: 20px 20px 0 0;
+  transform: rotate(10deg);
+  right: -125px;
+  top: -15px;
+  z-index: 1000000;
+
+  &:after {
+    content: "";
+    height: 12px;
+    width: 12px;
+    background: #000;
+    right: 4px;
+    top: 7px;
+    position: absolute;
+    transform: rotate(40deg);
+    transform-origin: 50% 50%;
+    border-radius: 0 0 0 2px;
+    z-index: 1000000;
+  }
+}
+
+.body > span > span:nth-child(1),
+.body > span > span:nth-child(2),
+.body > span > span:nth-child(3),
+.body > span > span:nth-child(4) {
+  width: 30px;
+  height: 1px;
+  background: yellow;
+  position: absolute;
+  animation: fazer1 .2s linear infinite;
+  z-index: 1000000;
+}
+
+.body > span > span:nth-child(2) {
+  top: 3px;
+  animation: fazer2 .4s linear infinite;
+  z-index: 1000000;
+}
+
+.body > span > span:nth-child(3) {
+  top: 1px;
+  animation: fazer3 .4s linear infinite;
+  animation-delay: -1s;
+  z-index: 1000000;
+}
+
+.body > span > span:nth-child(4) {
+  top: 4px;
+  animation: fazer4 1s linear infinite;
+  animation-delay: -1s;
+  z-index: 1000000;
+}
+
+@keyframes fazer1 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -80px;
+    opacity: 0;
+  }
+}
+
+@keyframes fazer2 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100px;
+    opacity: 0;
+  }
+}
+
+@keyframes fazer3 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -50px;
+    opacity: 0;
+  }
+}
+
+@keyframes fazer4 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -150px;
+    opacity: 0;
+  }
+}
+
+@keyframes speeder {
+  0% {
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -3px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-2px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 3px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-1px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-2px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.longfazers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1000000;
+
+  span {
+    position: absolute;
+    height: 2px;
+    width: 20%;
+    background: #000;
+    z-index: 1000000;
+
+    &:nth-child(1) {
+      top: 20%;
+      animation: lf .6s linear infinite;
+      animation-delay: -5s;
+      z-index: 1000000;
+    }
+
+    &:nth-child(2) {
+      top: 40%;
+      animation: lf2 .8s linear infinite;
+      animation-delay: -1s;
+      z-index: 1000000;
+    }
+
+    &:nth-child(3) {
+      top: 60%;
+      animation: lf3 .6s linear infinite;
+      z-index: 1000000;
+    }
+
+    &:nth-child(4) {
+      top: 80%;
+      animation: lf4 .5s linear infinite;
+      animation-delay: -3s;
+      z-index: 1000000;
+    }
+  }
+}
+
+@keyframes lf {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: -200%;
+    opacity: 0;
+  }
+}
+@keyframes lf2 {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: -200%;
+    opacity: 0;
+  }
+}
+@keyframes lf3 {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: -100%;
+    opacity: 0;
+  }
+}
+@keyframes lf4 {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: -100%;
+    opacity: 0;
+  }
+}
