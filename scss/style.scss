@@ -14,6 +14,11 @@ body {
     height: 100%;
     overflow: hidden;
 }
+// Mobile view
+.mobile_container {
+  display: none;
+}
+
 // fixed part
 .container-fluid {
     display: grid;
@@ -605,5 +610,25 @@ footer .social a {
   100% {
     left: -100%;
     opacity: 0;
+  }
+}
+
+
+// Media Queries
+@media (max-width: 993px) {
+  .layout {
+    height: auto;
+    overflow: auto;
+  }
+  .layout .container-fluid {
+    display: none;
+  }
+  .mobile_container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    padding: 5%;
   }
 }
