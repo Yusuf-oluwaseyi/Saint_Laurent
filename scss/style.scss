@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +9,7 @@
 body {
     background-color: #151515;
     color: #ffffff;
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'nunito', sans-serif;
 }
 .layout {
     height: 100%;
@@ -43,8 +44,8 @@ body {
           width: 35px;
         }
         .menu_btn_line {
-          background-color: #fff;
-          height: 1px;
+          background-color: #000;
+          height: 2px;
           margin: 5px 0;
           width: 25px;
         }
@@ -103,6 +104,9 @@ body {
     align-items: center;
     display: flex;
     margin-bottom: 10px;
+    h1:nth-child(1) {
+      font-family: 'Julius Sans One';
+    }
   }
   .intro_box .avi {
     display: none;
@@ -117,7 +121,35 @@ body {
   display: flex;
   padding-right: 20%;
 }
-
+.description p {
+  color: #777778;
+  font-size: var(--normal-font);
+  font-size: 0.9rem;
+  font-family: 'nunito';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  line-height: 2;
+  margin: 0;
+  span .highlight {
+    color: #fff;
+  }
+}
+.description p span.highlight {
+  -webkit-animation: flash 5s ease-in-out 0s 1;
+  animation: flash 5s ease-in-out 0s 1;
+    animation-name: flash;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    // animation-timeline: ;
+  color: #fff;
+  opacity: .9;
+}
 
 // fixed part
 .container-fluid {
@@ -142,16 +174,10 @@ h1 {
     margin-right: 15px;
     margin-top: 0;
 }
-.hero p {
-    font-size: 0.95rem;
-    // font-size: var(--normal-font);
-    font-weight: 400;
-    font-style: normal;
-}
-strong {
-    text-decoration: underline;
-    text-decoration-color: #a5a5a5;
-}
+// strong {
+//     text-decoration: underline;
+//     text-decoration-color: #a5a5a5;
+// }
 // eyes 
   .eyes {
     position: relative;
@@ -712,10 +738,35 @@ footer .social a {
     opacity: 0;
   }
 }
+@keyframes flash {
+  0% {
+    color: blue;
+  }
+}
 
 
 // Media Queries
 @media (max-width: 993px) {
+  *{
+    cursor: auto;
+  }
+  .inner_cursor, .outer_cursor {
+    display: none;
+  }
+  body {
+    background-color: #fff;
+    color: #151515;
+  }
+  .description p {
+    color: #151515;
+  }
+  span .highlight {
+    color: #151515;
+  }
+  .description p span.highlight {
+    color:#1b1b1d;
+    opacity: 1;
+  }
   .layout {
     height: auto;
     overflow: auto;
