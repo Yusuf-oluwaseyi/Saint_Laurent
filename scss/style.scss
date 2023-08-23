@@ -108,6 +108,16 @@ body {
     display: none;
   }
 
+#mobile .base_container .hero .description {
+  justify-content: center;
+  padding: 0;
+  text-align: center;
+}
+.description {
+  display: flex;
+  padding-right: 20%;
+}
+
 
 // fixed part
 .container-fluid {
