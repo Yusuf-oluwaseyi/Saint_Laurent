@@ -73,3 +73,11 @@ window.addEventListener("load", function() {
         document.body.removeChild(".loader");
     })
 });
+
+// Hamburger for mobile
+let hamburger = document.querySelector(".menu_btn");
+let navMenu = document.querySelector(".mobile_menu_container");
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.add("menu_btn_open")
+})

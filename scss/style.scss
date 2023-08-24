@@ -44,7 +44,7 @@ body {
           width: 35px;
         }
         .menu_btn_line {
-          background-color: #000;
+          background-color: #c1fe00;
           height: 2px;
           margin: 5px 0;
           width: 25px;
@@ -52,6 +52,30 @@ body {
       }
     }
   }
+}
+#header .header_wrapper .menu_btn_wrapper .menu_btn.menu_btn_open .menu_btn_line {
+  transition: width .2s linear;
+  width: 25px;
+}
+#header .header_wrapper .menu_btn_wrapper .menu_btn.menu_btn_open {
+  min-height: 25px;
+}
+#header .header_wrapper .menu_btn_wrapper .menu_btn.menu_btn_open .menu_btn_line:first-child {
+  position: relative;
+  top: 0px;
+  right: 7px;
+  -webkit-transform: rotate(0deg) translateY(10px);
+  transform: rotate(0deg) translateY(10px);
+  transition: -webkit-transform .2s linear;
+  transition: transform .2s linear;
+  transition: transform .2s linear,-webkit-transform .2s linear;
+}
+#header .header_wrapper .menu_btn_wrapper .menu_btn.menu_btn_open .menu_btn_line:nth-child(2) {
+  -webkit-transform: rotate(90deg) translateY(7px);
+  transform: rotate(90deg) translateY(7px);
+  transition: -webkit-transform .2s linear;
+  transition: transform .2s linear;
+  transition: transform .2s linear,-webkit-transform .2s linear;
 }
 
     #header nav {
@@ -136,6 +160,12 @@ body {
     h3 {
       color: #c1fe00;
     }
+  }
+  #header .social_box .social_icons a {
+    color: grey;
+    font-size: 20px;
+    margin: 15px 7.5px 0;
+    text-decoration: none;
   }
 #mobile {
   display: flex;
@@ -864,10 +894,17 @@ footer .social a {
     color: blue;
   }
 }
+@keyframes slide {
+  0% {
 
+  }
+}
 
 // Media Queries
 @media (max-width: 993px) {
+  .loader {
+    display: none;
+  }
   header {
     display: none;
   }
