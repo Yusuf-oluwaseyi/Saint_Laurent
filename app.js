@@ -76,8 +76,8 @@ window.addEventListener("load", function() {
 
 // Hamburger for mobile
 let hamburger = document.querySelector(".menu_btn");
-let navMenu = document.querySelector("."); //.mobile_menu_container
-let nav = document.querySelector("nav");
+// let navMenu = document.querySelector(".menu_btn .menu_btn_open"); 
+// let nav = document.querySelector("nav");
 
 hamburger.addEventListener('click', open);
 // navMenu.addEventListener('click', close);
@@ -85,17 +85,26 @@ hamburger.addEventListener('click', open);
 
    
 
-//    let close = hamburger.classList.remove("menu_btn_close")
-//    close = nav.style.display = "block";
-    // navMenu.classList.toggle("active");
+// //    let close = hamburger.classList.remove("menu_btn_close")
+// //    close = nav.style.display = "block";
+//     // navMenu.classList.toggle("active");
 
 function open() {
-    hamburger.classList.add("menu_btn_open")
-    nav.style.display = "block";
+    hamburger.classList.toggle("menu_btn_open")
 }
 
-function close() {
-    // hamburger.classList.remove("menu_btn_open")
-//    nav.style.display = "none"; 
-alert('Close');
+// function close() {
+//     // hamburger.classList.remove("menu_btn_open")
+// //    nav.style.display = "none"; 
+// alert('Close');
+// }
+
+// Another method
+function toggle() {
+    const menu = document.getElementById("tog");
+    if (tog.style.display == "none") {
+        tog.style.display = "block";
+    } else {
+        tog.style.display = "none";
+    }
 }
