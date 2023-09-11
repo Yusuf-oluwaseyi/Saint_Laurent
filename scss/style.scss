@@ -882,11 +882,11 @@ footer .social a {
   }
 }
 @keyframes slide {
-  0% {
-    transition: 0s;
+  from {
+    margin-top: 25%;
   }
-  100% {
-    transition: 0.5s;
+  to {
+    margin-top: 0%;
   }
 }
 
