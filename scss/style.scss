@@ -10,6 +10,7 @@ body {
     background-color: #151515;
     color: #ffffff;
     font-family: 'nunito', sans-serif;
+    overflow: hidden;
 }
 .layout {
     height: 100%;
@@ -44,7 +45,7 @@ body {
           width: 35px;
         }
         .menu_btn_line {
-          background-color: #c1fe00;
+          background-color: #87fb22;
           height: 2px;
           margin: 5px 0;
           width: 25px;
@@ -53,6 +54,7 @@ body {
     }
   }
 }
+
 #header .header_wrapper .menu_btn_wrapper .menu_btn.menu_btn_open .menu_btn_line {
   transition: width .2s linear;
   width: 25px;
@@ -98,6 +100,7 @@ body {
       top: 0;
       width: 100%;
       z-index: 2;
+      display: none;
     }
     .mobile_menu_container {
       display: flex;
@@ -158,7 +161,7 @@ body {
     flex-direction: column;
     margin: 1rem 0 0;
     h3 {
-      color: #c1fe00;
+      color: #87fb22;
     }
   }
   #header .social_box .social_icons a {
@@ -356,7 +359,7 @@ h1 {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: blue;
+    background: #87fb22;
   }
 
 
@@ -435,7 +438,7 @@ nav ul li a .menu_bullet {
         width: 2.5rem;
 }
 nav ul li:hover a .menu_bullet {
-    background-color: blue;
+    background-color: #87fb22;
     max-width: 4rem;
     transition: all .2s linear;
     width: 4rem;
@@ -486,7 +489,7 @@ footer .social a {
 .main h3 {
     font-size: .7rem;
     font-weight: bold;
-    color: blue;
+    color: #87fb22;
 }
 .container-fluid .main {
     height: 100vh;
@@ -586,26 +589,22 @@ footer .social a {
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 
 .loader {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: red;
-    transition: opacity 0.75s, visibility 0.75s;
-    z-index: 1000000;
+  position: absolute;
+  transition: opacity 10s, visibility 0.75s;
+  z-index: 10000;
+  background-color: #ffffff;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
 }
 .loader--hidden {
     opacity: 0;
     visibility: hidden;
-}
-.body {
-  background-color: #f70000;
-  overflow: hidden;
-  z-index: 1000000;
 }
 
 .name {
@@ -617,16 +616,14 @@ footer .social a {
   left: 50%;
   top: 58%;
   margin-left: -20px;
-  z-index: 1000000;
 }
 
-.body {
+.loader-body {
   position: absolute;
   top: 50%;
   margin-left: -50px;
   left: 50%;
   animation: speeder .4s linear infinite;
-  z-index: 1000000;
 
   > span {
     height: 5px;
@@ -636,7 +633,6 @@ footer .social a {
     top: -19px;
     left: 60px;
     border-radius: 2px 10px 1px 0;
-    z-index: 1000000;
   }
 }
 
@@ -646,20 +642,18 @@ footer .social a {
     width: 0;
     height: 0;
     border-top: 6px solid transparent;
-    border-right: 100px solid #000;
+    border-right: 100px solid #87fb22;
     border-bottom: 6px solid transparent;
-    z-index: 1000000;
 
     &:before {
       content: "";
       height: 22px;
       width: 22px;
       border-radius: 50%;
-      background: #000;
+      background: #87fb22;
       position: absolute;
       right: -110px;
       top: -16px;
-      z-index: 1000000;
     }
 
     &:after {
@@ -668,11 +662,10 @@ footer .social a {
       width: 0;
       height: 0;
       border-top: 0 solid transparent;
-      border-right: 55px solid #000;
+      border-right: 55px solid #87fb22;
       border-bottom: 16px solid transparent;
       top: -16px;
       right: -98px;
-      z-index: 1000000;
     }
   }
 }
@@ -681,58 +674,52 @@ footer .social a {
   position: absolute;
   height: 12px;
   width: 20px;
-  background: #000;
+  background: #87fb22;
   border-radius: 20px 20px 0 0;
   transform: rotate(10deg);
   right: -125px;
   top: -15px;
-  z-index: 1000000;
 
   &:after {
     content: "";
     height: 12px;
     width: 12px;
-    background: #000;
+    background: #87fb22;
     right: 4px;
     top: 7px;
     position: absolute;
     transform: rotate(40deg);
     transform-origin: 50% 50%;
     border-radius: 0 0 0 2px;
-    z-index: 1000000;
   }
 }
 
-.body > span > span:nth-child(1),
-.body > span > span:nth-child(2),
-.body > span > span:nth-child(3),
-.body > span > span:nth-child(4) {
+.loader-body > span > span:nth-child(1),
+.loader-body > span > span:nth-child(2),
+.loader-body > span > span:nth-child(3),
+.loader-body > span > span:nth-child(4) {
   width: 30px;
   height: 1px;
   background: yellow;
   position: absolute;
   animation: fazer1 .2s linear infinite;
-  z-index: 1000000;
 }
 
-.body > span > span:nth-child(2) {
+.loader-body > span > span:nth-child(2) {
   top: 3px;
   animation: fazer2 .4s linear infinite;
-  z-index: 1000000;
 }
 
-.body > span > span:nth-child(3) {
+.loader-body > span > span:nth-child(3) {
   top: 1px;
   animation: fazer3 .4s linear infinite;
   animation-delay: -1s;
-  z-index: 1000000;
 }
 
-.body > span > span:nth-child(4) {
+.loader-body > span > span:nth-child(4) {
   top: 4px;
   animation: fazer4 1s linear infinite;
   animation-delay: -1s;
-  z-index: 1000000;
 }
 
 @keyframes fazer1 {
@@ -815,40 +802,34 @@ footer .social a {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 1000000;
 
   span {
     position: absolute;
     height: 2px;
     width: 20%;
-    background: #000;
-    z-index: 1000000;
+    background: #19190b;
 
     &:nth-child(1) {
       top: 20%;
       animation: lf .6s linear infinite;
       animation-delay: -5s;
-      z-index: 1000000;
     }
 
     &:nth-child(2) {
       top: 40%;
       animation: lf2 .8s linear infinite;
       animation-delay: -1s;
-      z-index: 1000000;
     }
 
     &:nth-child(3) {
       top: 60%;
       animation: lf3 .6s linear infinite;
-      z-index: 1000000;
     }
 
     &:nth-child(4) {
       top: 80%;
       animation: lf4 .5s linear infinite;
       animation-delay: -3s;
-      z-index: 1000000;
     }
   }
 }
@@ -889,9 +870,10 @@ footer .social a {
     opacity: 0;
   }
 }
+
 @keyframes flash {
   0% {
-    color: blue;
+    color: #87fb22;
   }
 }
 @keyframes slide {
@@ -902,9 +884,9 @@ footer .social a {
 
 // Media Queries
 @media (max-width: 993px) {
-  .loader {
-    display: none;
-  }
+  // .loader {
+  //   display: none;
+  // }
   header {
     display: none;
   }

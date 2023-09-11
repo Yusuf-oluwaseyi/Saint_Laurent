@@ -76,8 +76,26 @@ window.addEventListener("load", function() {
 
 // Hamburger for mobile
 let hamburger = document.querySelector(".menu_btn");
-let navMenu = document.querySelector(".mobile_menu_container");
+let navMenu = document.querySelector("."); //.mobile_menu_container
+let nav = document.querySelector("nav");
 
-hamburger.addEventListener('click', () => {
+hamburger.addEventListener('click', open);
+// navMenu.addEventListener('click', close);
+ 
+
+   
+
+//    let close = hamburger.classList.remove("menu_btn_close")
+//    close = nav.style.display = "block";
+    // navMenu.classList.toggle("active");
+
+function open() {
     hamburger.classList.add("menu_btn_open")
-})
+    nav.style.display = "block";
+}
+
+function close() {
+    // hamburger.classList.remove("menu_btn_open")
+//    nav.style.display = "none"; 
+alert('Close');
+}
