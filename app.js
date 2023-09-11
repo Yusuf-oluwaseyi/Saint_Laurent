@@ -76,35 +76,16 @@ window.addEventListener("load", function() {
 
 // Hamburger for mobile
 let hamburger = document.querySelector(".menu_btn");
-// let navMenu = document.querySelector(".menu_btn .menu_btn_open"); 
-// let nav = document.querySelector("nav");
-
-hamburger.addEventListener('click', open);
-// navMenu.addEventListener('click', close);
- 
-
-   
-
-// //    let close = hamburger.classList.remove("menu_btn_close")
-// //    close = nav.style.display = "block";
-//     // navMenu.classList.toggle("active");
-
-function open() {
-    hamburger.classList.toggle("menu_btn_open")
-}
-
-// function close() {
-//     // hamburger.classList.remove("menu_btn_open")
-// //    nav.style.display = "none"; 
-// alert('Close');
-// }
-
-// Another method
+    hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("menu_btn_open")
+    })
 function toggle() {
     const menu = document.getElementById("tog");
-    if (tog.style.display == "none") {
-        tog.style.display = "block";
-    } else {
+    if (tog.style.display == "block") {
         tog.style.display = "none";
+    } else {
+        tog.style.display = "block";
     }
+    
+    
 }
