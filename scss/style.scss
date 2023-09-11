@@ -81,14 +81,14 @@ body {
 }
 
     #header nav {
-      -webkit-animation-duration: .3s;
-      animation-duration: .3s;
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s;
       -webkit-animation-iteration-count: 1;
       animation-iteration-count: 1;
       -webkit-animation-name: slide;
       animation-name: slide;
-      -webkit-animation-timing-function: linear;
-      animation-timing-function: linear;
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-ib;
       background-color: #16161a;
       background-color: #1b1b1d;
       display: flex;
@@ -883,10 +883,10 @@ footer .social a {
 }
 @keyframes slide {
   from {
-    margin-top: 75%;
+    margin-left: 50%;
   }
   to {
-    margin-top: 0%;
+    margin-left: 0%;
   }
 }
 
