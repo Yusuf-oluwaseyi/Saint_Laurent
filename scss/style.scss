@@ -474,6 +474,20 @@ footer .social a {
 .social a:hover {
     color: #ffffff;
 }
+.mobile_container .social_buttons {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.mobile_container .social_buttons a {
+  color: inherit;
+  display: flex;
+  font-size: 1.25rem;
+  margin: 3% 6%;
+  text-decoration: none;
+}
 
 //AUDIOS
 .hidden{
@@ -904,10 +918,6 @@ footer .social a {
   .inner_cursor, .outer_cursor {
     display: none;
   }
-  body {
-    background-color: #fff;
-    color: #151515;
-  }
   .description p {
     color: #151515;
   }
@@ -944,9 +954,33 @@ footer .social a {
     height: 113px;
     width: 113px;
   }
+  .avi img {
+    object-fit: cover;
+    transition: transform 0.8s;
+    height: 100%;
+  }
+  .avi:hover img {
+    transform: scale(1.5);
+  }
   .go_button_container {
     display: flex;
     margin-bottom: 20px;
+  }
+  .work {
+    margin: 30px 0;
+  }
+  .work .portfolio_showcase {
+    grid-template-columns: 1fr;
+  }
+  .work .portfolio_showcase .title {
+    grid-column-end: unset;
+    grid-column-start: unset;
+    margin: 0 10px;
+  }
+  .box_container {
+    margin: 4% 10px;
+    opacity: 1 !important;
+    width: auto;
   }
 }
 @media screen and (max-width: 450px) {
