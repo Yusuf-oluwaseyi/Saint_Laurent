@@ -75,12 +75,12 @@ window.addEventListener("load", function() {
 });
 
 // Hamburger for mobile
-let hamburger = document.querySelector(".menu_btn");
+let hamburger = document.querySelectorAll(".menu_btn");
     hamburger.addEventListener("click", function () {
         hamburger.classList.toggle("menu_btn_open")
     })
 function toggle() {
-    const menu = document.getElementById("tog");
+    const menu = document.querySelectorAll("#tog");
     if (tog.style.display == "block") {
         tog.style.display = "none";
     } else {
