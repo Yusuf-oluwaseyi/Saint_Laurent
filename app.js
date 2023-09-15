@@ -75,7 +75,7 @@ window.addEventListener("load", function() {
 });
 
 // Hamburger for mobile
-let hamburger = document.querySelectorAll(".menu_btn");
+let hamburger = document.querySelector(".menu_btn");
     hamburger.addEventListener("click", function () {
         hamburger.classList.toggle("menu_btn_open")
     })

@@ -12,6 +12,7 @@ body {
     color: #ffffff;
     font-family: 'nunito', sans-serif;
     overflow: hidden;
+    overflow-y: scroll;
 }
 .layout {
     height: 100%;
@@ -20,6 +21,7 @@ body {
 // Mobile view
 .mobile_container {
   display: none;
+  overflow: auto;
 }
 #header {
   display: flex;
@@ -42,6 +44,7 @@ body {
         flex-direction: column;
         justify-content: center;
         position: relative;
+        cursor: pointer;
         .menu_btn_line:first-child {
           width: 35px;
         }
