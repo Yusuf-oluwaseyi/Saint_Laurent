@@ -75,10 +75,15 @@ window.addEventListener("load", function() {
 });
 
 // Hamburger for mobile
-let hamburger = document.querySelector(".menu_btn");
-    hamburger.addEventListener("click", function () {
-        hamburger.classList.toggle("menu_btn_open")
-    })
+// let hamburger = document.querySelector(".menu_btn");
+//     hamburger.addEventListener("click", function () {
+//         hamburger.classList.toggle("menu_btn_open")
+//     })
+$(document).ready(function () {
+    $("#toggleButton").click(function () {
+        $(".menu_btn").toggleClass("menu_btn_open");
+    });
+});
 function toggle() {
     const menu = document.querySelectorAll("#tog");
     if (tog.style.display == "block") {
