@@ -266,8 +266,7 @@ body {
 .go_button_container {
   display: none;
   justify-content: center;
-  margin: 20px 0 0;
-    margin-bottom: 0px;
+  margin: 40px 0 0 0;
 }
 .go_button_container a.explore {
   width: -webkit-fit-content;
@@ -280,7 +279,7 @@ body {
   width: 40%;
 }
 .go_button_container button.explore {
-  padding: .6rem 2rem;
+  padding: .6rem 2.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -295,7 +294,7 @@ body {
   font-family: 'nunito';
   // font-size: var(--small-font);
   justify-content: center;
-  padding: .7rem 2rem;
+  padding: .7rem 2.5rem;
   width: 100%;
 }
 .go_button_container button.explore span {
@@ -304,7 +303,7 @@ body {
 }
 .go_button_container button span {
   display: none;
-  left: 2px;
+  left: 10px;
   position: relative;
   top: 1px;
 }
